@@ -19,7 +19,7 @@ export void VectorSaving(const std::vector<int>& vec, const std::string& path) {
 
 export void WriteResult(const std::vector<long long>& result, std::string_view filename,
                         std::size_t size, const auto& time) {
-    std::ofstream file(std::format("../../lab1/data/result/{}", filename));
+    std::ofstream file(std::format("../../../lab1/data/result/{}", filename));
     if (!file) throw std::logic_error("Error open file");
 
     std::println(file, "#Execution time: {}", time);

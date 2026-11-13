@@ -1,8 +1,10 @@
+#include <omp.h>
+
 import std;
 import IOMatrix;
 import Multiplyer;
 import RMatrix;
-#include <omp.h>
+
 
 int main() {
     constexpr std::array sizes = {200, 400, 800, 1200, 1600, 2000};
@@ -13,7 +15,7 @@ int main() {
     std::println("{:-<10}-+-{:-<10}-+-{:-<15}", "", "", "");
 
     auto dataPath = [](int n, int idx) {
-        return std::format("../../lab1/data/m{}_{}.txt", n, idx);
+        return std::format("../../../lab1/data/m{}_{}.txt", n, idx);
     };
 
     for (int size : sizes) {
