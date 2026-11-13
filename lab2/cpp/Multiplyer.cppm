@@ -1,7 +1,10 @@
-export module Multiplyer;
-import std;
-
+module;
+#include <vector>
 #include <omp.h>
+
+
+export module Multiplyer;
+
 
 export void MultiplyerMatrix(const std::vector<int>& a, const std::vector<int>& b,
                           std::vector<long long>& result, std::size_t size) {
